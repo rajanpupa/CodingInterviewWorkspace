@@ -8,7 +8,13 @@ public class NumPermutation {
 	public static void main(String[] args) {
 		
 		//permut(12345);
-		permut2(12345);
+		//permut2(12345);
+		
+		int a = 130;
+		
+		byte b = (byte)(a);
+		
+		System.out.println(b);
 		
 	}
 	
