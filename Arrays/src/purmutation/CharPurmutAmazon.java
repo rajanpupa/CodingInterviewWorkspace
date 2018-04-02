@@ -11,7 +11,7 @@ public class CharPurmutAmazon {
 
 	public static void main(String[] args) {
 		String ab = "ab";
-		String cd = "cde";
+		String cd = "cd";
 		
 		CharPurmutAmazon cp = new CharPurmutAmazon();
 		
@@ -31,15 +31,21 @@ public class CharPurmutAmazon {
 			}
 			return;
 		}
-		
 		for(int i=0; i<=ind; i++){
 			StringBuilder sb = new StringBuilder(cd);
 			sb.insert(i, ab.substring(ab.length()-1));
 			purmut(ab.substring(0, ab.length()-1), sb.toString(), i);
 		}
-		
 	}
-	
-	
-	
 }
+/*
+ * Solution
+ * 
+ * Given second string (cd)
+ * from the first string (ab)
+ * 	from last character to first of ab
+ * 	put the char in every possible index of cd
+ * 		for all the remaining characters of ab
+ * 			repeat the same thing
+ * 			pring if ab is ""
+ */
