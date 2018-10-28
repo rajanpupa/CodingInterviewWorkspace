@@ -3,6 +3,7 @@ package amaz;
 import java.util.Arrays;
 
 // Sum of two numbers
+// find how many pairs exists in a that sums up to target k
 public class Solution {
 	
 	public static void main(String[] args) {
