@@ -1,8 +1,12 @@
+package parenthesis;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+/**
+ * Given an integer n, generate all the valid opening and closing parenthesis combination.
+ */
 /**
  * Using the backtracking algorithm to solve this.
  * 
