@@ -45,7 +45,7 @@ public class CountRectantlesFromPoints {
 	
 	
 	Map<Integer, List<Point>> y_map = new HashMap<>();
-	Map<Integer, List<Point>> x_map = new HashMap<>();
+	//Map<Integer, List<Point>> x_map = new HashMap<>();
 	
 	public int countRectangles(List<Point> points) {
 		
@@ -53,13 +53,12 @@ public class CountRectantlesFromPoints {
 		for(Point p : points) {
 			List<Point> pointListy = getPointsByKey(y_map, p.y);
 			pointListy.add(p);
-			List<Point> pointListx = getPointsByKey(x_map, p.x);
-			pointListx.add(p);
+			//List<Point> pointListx = getPointsByKey(x_map, p.x);
+			//pointListx.add(p);
 		}
 		
 		// for each horizontal plane combination, check how many lines are there
 		List yList = Arrays.asList(y_map.keySet().toArray());
-
 		Integer rectantles = 0;
 		for(int i = 0; i<yList.size()-1; i++) {
 			for(int j = i+1; j<yList.size(); j++) {
@@ -67,7 +66,7 @@ public class CountRectantlesFromPoints {
 				List<Point> ithPoints = y_map.get(i);
 				List<Point> jthPoints = y_map.get(j);
 				
-				int c = 0;
+				int c = 0; // number of lines between these two planes
 				for(Point ithPoint: ithPoints) {
 					for(Point jthPoint: jthPoints) {
 						if(ithPoint.x == jthPoint.x) {
@@ -87,7 +86,7 @@ public class CountRectantlesFromPoints {
 	
 	
 	private int getRectanglesCount(Integer c) {
-		if(c <=1) return 0;
+		if(c <=1 ) return 0;
 		
 		Integer count = rectangleCount.get(c);
 		
