@@ -37,6 +37,7 @@ public class Node {
 				n.left = null;
 			}
 			
+			if(index >= arr.length) break;
 			nextval = arr[index++];
 			if(nextval != null) {
 				n.right = new Node(nextval);
