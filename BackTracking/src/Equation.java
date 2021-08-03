@@ -25,28 +25,28 @@ public class Equation {
     	String right = eq[1];
     	
     	List<String> ltokens = parse(left);
-    	System.out.println("ltokens = " + ltokens);
+    	//System.out.println("ltokens = " + ltokens);
     	
         int lnum = 0;
     	lnum = sumNums(ltokens, lnum);
     	
-        System.out.println("lnum = " + lnum);
+        //System.out.println("lnum = " + lnum);
     	int lxcoef = 0;
     	lxcoef = sumXCoefs(ltokens, lxcoef);
-    	System.out.println("lxcoef = " + lxcoef);
+    	//System.out.println("lxcoef = " + lxcoef);
     	
     	
     	List<String> rtokens = parse(right);
-        System.out.println("rtokens = " + rtokens);
+        //System.out.println("rtokens = " + rtokens);
     	int rnum = 0;
        
         
     	rnum = sumNums(rtokens, rnum);
-        System.out.println("rnum = " + rnum);
+        //System.out.println("rnum = " + rnum);
         
     	int rxcoef = 0;
     	rxcoef = sumXCoefs(rtokens, rxcoef);
-         System.out.println("rxcoef = " + rxcoef);
+         //System.out.println("rxcoef = " + rxcoef);
     	
     	int totalLeftXCoef = lxcoef - rxcoef;
     	int totalRightNum = rnum - lnum;
